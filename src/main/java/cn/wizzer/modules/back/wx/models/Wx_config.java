@@ -48,6 +48,21 @@ public class Wx_config extends Model implements Serializable {
     @ColDefine(type = ColType.VARCHAR, width = 100)
     private String token;
 
+    @Column
+    @Comment("商户ID")
+    @ColDefine(type = ColType.VARCHAR, width = 100)
+    private String payMchid;
+
+    @Column
+    @Comment("商户KEY")
+    @ColDefine(type = ColType.VARCHAR, width = 100)
+    private String payKey;
+
+    @Column
+    @Comment("商户密钥")
+    @ColDefine(type = ColType.VARCHAR, width = 100)
+    private String payAppSecret;
+
     public String getId() {
         return id;
     }
@@ -102,5 +117,29 @@ public class Wx_config extends Model implements Serializable {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public String getPayMchid() {
+        return payMchid;
+    }
+
+    public void setPayMchid(String payMchid) {
+        this.payMchid = payMchid;
+    }
+
+    public String getPayKey() {
+        return payKey;
+    }
+
+    public void setPayKey(String payKey) {
+        this.payKey = payKey;
+    }
+
+    public String getPayAppSecret() {
+        return payAppSecret;
+    }
+
+    public void setPayAppSecret(String payAppSecret) {
+        this.payAppSecret = payAppSecret;
     }
 }
