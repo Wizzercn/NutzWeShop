@@ -4,6 +4,7 @@ import cn.wizzer.common.base.Model;
 import org.nutz.dao.entity.annotation.*;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created by wizzer on 2016/8/12.
@@ -40,6 +41,9 @@ public class We_goods_class extends Model implements Serializable {
     @Column
     @Comment("有子节点")
     private boolean hasChildren;
+
+    @Many(target = We_goods.class, field = "classId")
+    private List<We_goods> goodsList;
 
     public String getId() {
         return id;
@@ -87,5 +91,13 @@ public class We_goods_class extends Model implements Serializable {
 
     public void setHasChildren(boolean hasChildren) {
         this.hasChildren = hasChildren;
+    }
+
+    public List<We_goods> getGoodsList() {
+        return goodsList;
+    }
+
+    public void setGoodsList(List<We_goods> goodsList) {
+        this.goodsList = goodsList;
     }
 }
