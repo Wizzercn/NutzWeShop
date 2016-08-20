@@ -355,7 +355,6 @@
     </dependencies>
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>
-        <outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
