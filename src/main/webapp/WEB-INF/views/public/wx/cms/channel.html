@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
-    <title>${AppName!}</title>
+    <title><%if(!isEmpty(site.site_name)){%>${site.site_name!}<%}else{%>${AppName!}<%}%></title>
     <link rel="stylesheet" href="${base}/assets/public/wx/cms/css/channel.css">
 </head>
 <body class="zh_CN">
@@ -67,7 +67,7 @@
             list.show();
         } else {
             $.ajax({
-                type: 'get', url: '${base}/open/weixin/cms/list/' + channelId, success: function (data) {
+                type: 'get', url: '${base}/public/wx/cms/list/' + channelId, success: function (data) {
                     if (data.code == 0) {
                         $.each(data.data, function (i, o) {
                             var s = '', img = '', t = '';
