@@ -23,7 +23,7 @@ layout("/layouts/private.html"){
                         </th>
                         <th class="col-md-1">栏目类型</th>
                         <th class="col-md-1">URL</th>
-                        <th class="col-md-1">打开方式</th>
+                        <!--<th class="col-md-1">打开方式</th>-->
                         <th class="col-md-1">启用状态</th>
                         <th class="col-md-2">操作</th>
                     </tr>
@@ -37,7 +37,7 @@ layout("/layouts/private.html"){
                         </td>
                         <td><%if(obj.type=="article"){%>文章<%}%><%if(obj.type=="photo"){%>相册<%}%></td>
                         <td>${obj.url!}</td>
-                        <td>${obj.target!}</td>
+                        <!--<td>${obj.target!}</td>-->
                         <td><%if(false==obj.disabled){%><i id="disable_${obj.id!}" class="fa fa-circle text-success ml5"></i><%}else{%><i id="disable_${obj.id!}" class="fa fa-circle text-danger ml5"></i><%}%></td>
                         <td>
                             <div class="btn-group">

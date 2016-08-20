@@ -6,7 +6,7 @@
     </td>
     <td><%if(o.type=="article"){%>文章<%}%><%if(o.type=="photo"){%>相册<%}%></td>
     <td>${o.url!}</td>
-    <td>${o.target!}</td>
+    <!--<td>${o.target!}</td>-->
     <td><%if(false==o.disabled){%><i id="disable_${o.id!}" class="fa fa-circle text-success ml5"></i><%}else{%><i id="disable_${o.id!}" class="fa fa-circle text-danger ml5"></i><%}%></td>
     <td>
         <div class="btn-group">

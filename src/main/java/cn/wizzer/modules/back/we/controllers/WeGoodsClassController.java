@@ -48,7 +48,6 @@ public class WeGoodsClassController {
 
     @At
     @Ok("json")
-    @RequiresPermissions("we.goods.class.add")
     @SLog(tag = "新建商品分类", msg = "分类名称:${args[0].name}")
     public Object addDo(@Param("..") We_goods_class w, @Param("parentId") String parentId, HttpServletRequest req) {
         try {
@@ -79,7 +78,6 @@ public class WeGoodsClassController {
 
     @At
     @Ok("json")
-    @RequiresPermissions("we.goods.class.edit")
     @SLog(tag = "编辑商品分类", msg = "分类名称:${args[0].name}")
     public Object editDo(@Param("..") We_goods_class w, @Param("parentId") String parentId, HttpServletRequest req) {
         try {
@@ -94,7 +92,6 @@ public class WeGoodsClassController {
 
     @At("/delete/?")
     @Ok("json")
-    @RequiresPermissions("we.goods.class.delete")
     @SLog(tag = "删除商品分类", msg = "分类名称:${args[1].getAttribute('name')}")
     public Object delete(String id, HttpServletRequest req) {
         try {
