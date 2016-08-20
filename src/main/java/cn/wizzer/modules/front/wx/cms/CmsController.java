@@ -46,9 +46,19 @@ public class CmsController {
     @Ok("json")
     public Object list(String channelId, HttpServletRequest req) {
         try {
-            return Result.success("", cmsArticleService.query("^(id|title|info|picurl)$", Cnd.where("channelId", "=", channelId).desc("publishAt")));
+            Cnd cnd = Cnd.NEW();
+            if (!"all".equals(channelId)) {
+                cnd.and("channelId", "=", channelId);
+            }
+            return Result.success("", cmsArticleService.query("^(id|title|info|picurl)$", cnd.desc("publishAt")));
         } catch (Exception e) {
             return Result.error("");
         }
+    }
+
+    @At("/article/?")
+    @Ok("beetl:/public/wx/cms/article.html")
+    public Object article(String id, HttpServletRequest req) {
+        return cmsArticleService.fetch(id);
     }
 }

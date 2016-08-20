@@ -30,6 +30,7 @@
         </div>
         <%}%>
         <div class="tab js_plugin" id="namespace_1" data-pid="2">
+            <%if(!isEmpty(obj)){%>
             <div class="tab_hd">
                 <div class="tab_hd_inner">
 
@@ -46,12 +47,26 @@
 
                 </div>
             </div>
+            <%}else{%>
+            <div class="tab_hd" style="display: none;">
+                <div class="tab_hd_inner">
+                    <div type="index" data-id="all"
+                         class="item active">
+                    </div>
+                </div>
+            </div>
+            <%}%>
+
             <div class="tab_bd">
+                <%if(!isEmpty(obj)){%>
                 <%for(o in obj){%>
                 <div class="article_list article_list_${o.id}" style="display: none;">
                 </div>
                 <%}%>
-
+                <%}else{%>
+                <div class="article_list article_list_all" style="display: none;">
+                </div>
+                <%}%>
             </div>
         </div>
 
@@ -81,7 +96,7 @@
                             if (o.title) {
                                 t = '<h2 class="title js_title">' + o.title + '</h2>';
                             }
-                            list.append('<a class="list_item js_post" href="${base}/open/weixin/cms/list/' + o.id + '">' + img +
+                            list.append('<a class="list_item js_post" href="${base}/public/wx/cms/article/' + o.id + '">' + img +
                                     '<div class="cont">' + t +
                                     s + '</div></a>');
 
