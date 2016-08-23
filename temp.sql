@@ -1,6 +1,6 @@
 /*
-SQLyog Ultimate v8.32 
-MySQL - 5.6.0-m4 : Database - weshop
+SQLyog Ultimate v12.08 (64 bit)
+MySQL - 10.1.13-MariaDB : Database - weshop
 *********************************************************************
 */
 
@@ -48,6 +48,7 @@ CREATE TABLE `cms_article` (
 /*Data for the table `cms_article` */
 
 insert  into `cms_article`(`id`,`shopid`,`title`,`info`,`author`,`picurl`,`content`,`disabled`,`publishAt`,`location`,`channelId`,`opBy`,`opAt`,`delFlag`) values ('28525c788a704d70a6c85c5dc97bfa88',NULL,'公司资质','公司资质','超级管理员','','<p style=\"text-align: center;\"><img src=\"/upload/image/20160820/p6lgcn13v2ipaqecu0s8j6s8bn.png\" style=\"\"/></p><p style=\"text-align: center;\"><img src=\"/upload/image/20160820/44gndvj0d2jjcr1na768p6cg2j.png\" style=\"\"/></p><p><br/></p>',0,1471663329,1,'f0ff12aad3914812aaecbe482a660009','ed822b0fc0fb491d84f088e53e80ec36',1471663557,0);
+insert  into `cms_article`(`id`,`shopid`,`title`,`info`,`author`,`picurl`,`content`,`disabled`,`publishAt`,`location`,`channelId`,`opBy`,`opAt`,`delFlag`) values ('55968aeb17784d8690983cec19d65221',NULL,'测试111111','','超级管理员','','<p>12121221</p>',0,1471703231,4,'','ed822b0fc0fb491d84f088e53e80ec36',1471703237,0);
 insert  into `cms_article`(`id`,`shopid`,`title`,`info`,`author`,`picurl`,`content`,`disabled`,`publishAt`,`location`,`channelId`,`opBy`,`opAt`,`delFlag`) values ('871710077c964736bc0ed9617e13502f',NULL,'产品1','产品1','超级管理员','/upload/image/20160820/qgjv93b5gsh9po2acldm3hhtil.png','<p>产品1</p>',0,1471681296,3,'c0aac647702445e5b5cbf46b6b6a44db','ed822b0fc0fb491d84f088e53e80ec36',1471681319,0);
 insert  into `cms_article`(`id`,`shopid`,`title`,`info`,`author`,`picurl`,`content`,`disabled`,`publishAt`,`location`,`channelId`,`opBy`,`opAt`,`delFlag`) values ('96f6eaaa1c4b4064af4f2966e313a600',NULL,'联系我','联系我','超级管理员','/upload/image/20160820/vm9fmhs9nqg0hol2rhbd3v49cf.jpg','<p>联系我联系我</p><p>联系我联系我</p><p><br/></p><p>联系我联系我</p>',0,1471663563,2,'f0ff12aad3914812aaecbe482a660009','ed822b0fc0fb491d84f088e53e80ec36',1471663764,0);
 
@@ -156,7 +157,7 @@ CREATE TABLE `cms_site` (
 
 /*Data for the table `cms_site` */
 
-insert  into `cms_site`(`id`,`shopid`,`site_name`,`site_domain`,`site_icp`,`site_logo`,`site_wap_logo`,`site_qq`,`site_email`,`site_tel`,`weibo_name`,`weibo_url`,`weibo_qrcode`,`wechat_name`,`wechat_id`,`wechat_qrcode`,`seo_keywords`,`seo_description`,`footer_content`,`opBy`,`opAt`,`delFlag`) values ('site',NULL,'微商城','','','/upload/image/20160820/1qdgcnb40kgqfqai4gt88fp9qg.jpg','','','','','','','','','','','','','','ed822b0fc0fb491d84f088e53e80ec36',1471663144,0);
+insert  into `cms_site`(`id`,`shopid`,`site_name`,`site_domain`,`site_icp`,`site_logo`,`site_wap_logo`,`site_qq`,`site_email`,`site_tel`,`weibo_name`,`weibo_url`,`weibo_qrcode`,`wechat_name`,`wechat_id`,`wechat_qrcode`,`seo_keywords`,`seo_description`,`footer_content`,`opBy`,`opAt`,`delFlag`) values ('site',NULL,'微商城','','','/upload/image/20160820/phdpkhdhm6h95pu2tffq4tvh8b.png','','','','','','','','','','','','','','ed822b0fc0fb491d84f088e53e80ec36',1471663144,0);
 
 /*Table structure for table `sys_api` */
 
@@ -187,7 +188,7 @@ CREATE TABLE `sys_config` (
 
 /*Data for the table `sys_config` */
 
-insert  into `sys_config`(`configKey`,`configValue`,`note`,`opBy`,`opAt`,`delFlag`) values ('AppDomain','127.0.0.1','系统域名','',1471658661,0);
+insert  into `sys_config`(`configKey`,`configValue`,`note`,`opBy`,`opAt`,`delFlag`) values ('AppDomain','wizzercn.vicp.cc','系统域名','',1471658661,0);
 insert  into `sys_config`(`configKey`,`configValue`,`note`,`opBy`,`opAt`,`delFlag`) values ('AppName','WeShop','系统名称','',1471658661,0);
 insert  into `sys_config`(`configKey`,`configValue`,`note`,`opBy`,`opAt`,`delFlag`) values ('AppShrotName','WeShop','系统短名称','',1471658661,0);
 insert  into `sys_config`(`configKey`,`configValue`,`note`,`opBy`,`opAt`,`delFlag`) values ('AppUploadPath','/upload','文件上传文件夹','',1471658661,0);
@@ -211,6 +212,23 @@ CREATE TABLE `sys_dict` (
 
 /*Data for the table `sys_dict` */
 
+insert  into `sys_dict`(`id`,`parentId`,`path`,`name`,`code`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('0a46b2f26b8f400fa89e09b713adb388','','0001','区域','',1,1,'ed822b0fc0fb491d84f088e53e80ec36',1471962584,0);
+insert  into `sys_dict`(`id`,`parentId`,`path`,`name`,`code`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('10bd2723895a4386a5e502d7c6348485','87dedc03715548f5885c5d5ea06e3d96','00020001','袋','袋',3,0,'ed822b0fc0fb491d84f088e53e80ec36',1471962604,0);
+insert  into `sys_dict`(`id`,`parentId`,`path`,`name`,`code`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('157f018020bb47f98767df38ae4760af','d2d191a9dc0041d7a7ec442126e1185b','000100010001','合肥市','合肥市',8,1,'ed822b0fc0fb491d84f088e53e80ec36',1471962947,0);
+insert  into `sys_dict`(`id`,`parentId`,`path`,`name`,`code`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('214727b849d64307a3c65f2e6903d868','157f018020bb47f98767df38ae4760af','0001000100010003','蜀山区','蜀山区',11,0,'ed822b0fc0fb491d84f088e53e80ec36',1471963013,0);
+insert  into `sys_dict`(`id`,`parentId`,`path`,`name`,`code`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('2c1dea67f46a463ea1ce919626a2c10c','157f018020bb47f98767df38ae4760af','0001000100010007','高新区','高新区',15,0,'ed822b0fc0fb491d84f088e53e80ec36',1471963047,0);
+insert  into `sys_dict`(`id`,`parentId`,`path`,`name`,`code`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('30280cfdc666449f97f02ad987b1d506','87dedc03715548f5885c5d5ea06e3d96','00020004','盒','盒',6,0,'ed822b0fc0fb491d84f088e53e80ec36',1471962647,0);
+insert  into `sys_dict`(`id`,`parentId`,`path`,`name`,`code`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('3517fa1aecd74660a4c2d54f93dfb9f9','157f018020bb47f98767df38ae4760af','0001000100010008','滨湖新区','滨湖新区',16,0,'ed822b0fc0fb491d84f088e53e80ec36',1471963054,0);
+insert  into `sys_dict`(`id`,`parentId`,`path`,`name`,`code`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('40a052fa2b6a41cc8810b89a98823b3d','157f018020bb47f98767df38ae4760af','0001000100010001','庐阳区','庐阳区',9,0,'ed822b0fc0fb491d84f088e53e80ec36',1471962992,0);
+insert  into `sys_dict`(`id`,`parentId`,`path`,`name`,`code`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('4dbc432a2b4343f1a5280b4967f6e859','87dedc03715548f5885c5d5ea06e3d96','00020003','箱','箱',5,0,'ed822b0fc0fb491d84f088e53e80ec36',1471962628,0);
+insert  into `sys_dict`(`id`,`parentId`,`path`,`name`,`code`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('59570d78cfeb4fb1a417e8b4507d3912','87dedc03715548f5885c5d5ea06e3d96','00020002','包','包',4,0,'ed822b0fc0fb491d84f088e53e80ec36',1471962617,0);
+insert  into `sys_dict`(`id`,`parentId`,`path`,`name`,`code`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('70db43e191e14e218819c34282be16e9','157f018020bb47f98767df38ae4760af','0001000100010006','政务区','政务区',14,0,'ed822b0fc0fb491d84f088e53e80ec36',1471963039,0);
+insert  into `sys_dict`(`id`,`parentId`,`path`,`name`,`code`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('87dedc03715548f5885c5d5ea06e3d96','','0002','计件单位','',2,1,'ed822b0fc0fb491d84f088e53e80ec36',1471962660,0);
+insert  into `sys_dict`(`id`,`parentId`,`path`,`name`,`code`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('a0ca709c180a4670a951d86567563bf0','157f018020bb47f98767df38ae4760af','0001000100010004','包河区','包河区',12,0,'ed822b0fc0fb491d84f088e53e80ec36',1471963021,0);
+insert  into `sys_dict`(`id`,`parentId`,`path`,`name`,`code`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('a7f23fbcfe2f45fb9967aa0fc7b57088','157f018020bb47f98767df38ae4760af','0001000100010005','经开区','经开区',13,0,'ed822b0fc0fb491d84f088e53e80ec36',1471963031,0);
+insert  into `sys_dict`(`id`,`parentId`,`path`,`name`,`code`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('c807c46ad3564baa9e7584b0b6ea4a72','157f018020bb47f98767df38ae4760af','0001000100010002','瑶海区','瑶海区',10,0,'ed822b0fc0fb491d84f088e53e80ec36',1471963004,0);
+insert  into `sys_dict`(`id`,`parentId`,`path`,`name`,`code`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('d2d191a9dc0041d7a7ec442126e1185b','0a46b2f26b8f400fa89e09b713adb388','00010001','安徽省','安徽省',7,1,'ed822b0fc0fb491d84f088e53e80ec36',1471962935,0);
+
 /*Table structure for table `sys_log` */
 
 CREATE TABLE `sys_log` (
@@ -225,7 +243,7 @@ CREATE TABLE `sys_log` (
   `opAt` int(20) DEFAULT NULL COMMENT '操作时间',
   `delFlag` tinyint(1) DEFAULT NULL COMMENT '删除标记',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=92 DEFAULT CHARSET=utf8;
 
 /*Data for the table `sys_log` */
 
@@ -264,6 +282,62 @@ insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opA
 insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (33,'超级管理员','info','用户登陆','cn.wizzer.modules.back.sys.controllers.LoginController#doLogin','127.0.0.1','成功登录系统！','ed822b0fc0fb491d84f088e53e80ec36',1471673920,NULL);
 insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (34,'超级管理员','aop.after','添加文章','cn.wizzer.modules.back.cms.controllers.CmsArticleController#editDo','127.0.0.1','文章标题:联系我','ed822b0fc0fb491d84f088e53e80ec36',1471680945,NULL);
 insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (35,'超级管理员','aop.after','添加文章','cn.wizzer.modules.back.cms.controllers.CmsArticleController#addDo','127.0.0.1','文章标题:产品1','ed822b0fc0fb491d84f088e53e80ec36',1471681319,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (36,'超级管理员','info','用户登陆','cn.wizzer.modules.back.sys.controllers.LoginController#doLogin','127.0.0.1','成功登录系统！','ed822b0fc0fb491d84f088e53e80ec36',1471701037,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (37,'超级管理员','aop.after','添加文章','cn.wizzer.modules.back.cms.controllers.CmsArticleController#addDo','127.0.0.1','文章标题:测试111111','ed822b0fc0fb491d84f088e53e80ec36',1471703237,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (38,'超级管理员','aop.after','修改站点','cn.wizzer.modules.back.cms.controllers.CmsSiteController#editDo','127.0.0.1','微商城','ed822b0fc0fb491d84f088e53e80ec36',1471704298,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (39,'超级管理员','aop.after','添加帐号','cn.wizzer.modules.back.wx.controllers.WxConfigController#addDo','127.0.0.1','帐号名称:1','ed822b0fc0fb491d84f088e53e80ec36',1471706984,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (40,'超级管理员','aop.after','修改参数','cn.wizzer.modules.back.sys.controllers.ConfController#editDo','127.0.0.1','AppDomain:wizzercn.vicp.cc','ed822b0fc0fb491d84f088e53e80ec36',1471711459,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (41,'超级管理员','aop.after','添加菜单','cn.wizzer.modules.back.wx.controllers.WxMenuController#addDo','127.0.0.1','菜单名称:CMS','ed822b0fc0fb491d84f088e53e80ec36',1471711590,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (42,'超级管理员','aop.after','添加菜单','cn.wizzer.modules.back.wx.controllers.WxMenuController#addDo','127.0.0.1','菜单名称:栏目1','ed822b0fc0fb491d84f088e53e80ec36',1471711611,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (43,'超级管理员','aop.after','添加菜单','cn.wizzer.modules.back.wx.controllers.WxMenuController#addDo','127.0.0.1','菜单名称:栏目2','ed822b0fc0fb491d84f088e53e80ec36',1471711623,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (44,'超级管理员','aop.after','添加菜单','cn.wizzer.modules.back.wx.controllers.WxMenuController#addDo','127.0.0.1','菜单名称:文章1','ed822b0fc0fb491d84f088e53e80ec36',1471711640,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (45,'超级管理员','aop.after','推送菜单','cn.wizzer.modules.back.wx.controllers.WxMenuController#pushMenu','127.0.0.1','公众号名称:测试','ed822b0fc0fb491d84f088e53e80ec36',1471711643,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (46,'超级管理员','aop.after','修改菜单','cn.wizzer.modules.back.wx.controllers.WxMenuController#editDo','127.0.0.1','菜单名称:栏目2','ed822b0fc0fb491d84f088e53e80ec36',1471712337,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (47,'超级管理员','info','用户登陆','cn.wizzer.modules.back.sys.controllers.LoginController#doLogin','127.0.0.1','成功登录系统！','ed822b0fc0fb491d84f088e53e80ec36',1471955217,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (48,'超级管理员','info','用户登出','cn.wizzer.modules.back.sys.controllers.LoginController#logout','127.0.0.1','退出系统！','ed822b0fc0fb491d84f088e53e80ec36',1471955575,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (49,'超级管理员','info','用户登陆','cn.wizzer.modules.back.sys.controllers.LoginController#doLogin','127.0.0.1','成功登录系统！','ed822b0fc0fb491d84f088e53e80ec36',1471955581,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (50,'超级管理员','info','用户登陆','cn.wizzer.modules.back.sys.controllers.LoginController#doLogin','127.0.0.1','成功登录系统！','ed822b0fc0fb491d84f088e53e80ec36',1471956035,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (51,'超级管理员','info','用户登陆','cn.wizzer.modules.back.sys.controllers.LoginController#doLogin','127.0.0.1','成功登录系统！','ed822b0fc0fb491d84f088e53e80ec36',1471956884,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (52,'超级管理员','info','用户登陆','cn.wizzer.modules.back.sys.controllers.LoginController#doLogin','127.0.0.1','成功登录系统！','ed822b0fc0fb491d84f088e53e80ec36',1471958750,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (53,'超级管理员','aop.after','添加商品','cn.wizzer.modules.back.we.controllers.WeGoodsController#addDo','127.0.0.1','商品名称：','ed822b0fc0fb491d84f088e53e80ec36',1471959708,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (54,'超级管理员','aop.after','添加商品','cn.wizzer.modules.back.we.controllers.WeGoodsController#addDo','127.0.0.1','商品名称：','ed822b0fc0fb491d84f088e53e80ec36',1471960038,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (55,'超级管理员','aop.after','添加商品','cn.wizzer.modules.back.we.controllers.WeGoodsController#addDo','127.0.0.1','商品名称：12122','ed822b0fc0fb491d84f088e53e80ec36',1471960167,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (56,'超级管理员','aop.after','修改We_goods','cn.wizzer.modules.back.we.controllers.WeGoodsController#editDo','127.0.0.1','ID:','ed822b0fc0fb491d84f088e53e80ec36',1471961120,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (57,'超级管理员','aop.after','添加商品','cn.wizzer.modules.back.we.controllers.WeGoodsController#addDo','127.0.0.1','商品名称：饼干','ed822b0fc0fb491d84f088e53e80ec36',1471961342,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (58,'超级管理员','aop.after','新建字典','cn.wizzer.modules.back.sys.controllers.DictController#addDo','127.0.0.1','字典名称:区域','ed822b0fc0fb491d84f088e53e80ec36',1471962584,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (59,'超级管理员','aop.after','新建字典','cn.wizzer.modules.back.sys.controllers.DictController#addDo','127.0.0.1','字典名称:单位','ed822b0fc0fb491d84f088e53e80ec36',1471962593,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (60,'超级管理员','aop.after','新建字典','cn.wizzer.modules.back.sys.controllers.DictController#addDo','127.0.0.1','字典名称:袋','ed822b0fc0fb491d84f088e53e80ec36',1471962604,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (61,'超级管理员','aop.after','新建字典','cn.wizzer.modules.back.sys.controllers.DictController#addDo','127.0.0.1','字典名称:包','ed822b0fc0fb491d84f088e53e80ec36',1471962617,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (62,'超级管理员','aop.after','新建字典','cn.wizzer.modules.back.sys.controllers.DictController#addDo','127.0.0.1','字典名称:箱','ed822b0fc0fb491d84f088e53e80ec36',1471962628,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (63,'超级管理员','aop.after','新建字典','cn.wizzer.modules.back.sys.controllers.DictController#addDo','127.0.0.1','字典名称:盒','ed822b0fc0fb491d84f088e53e80ec36',1471962647,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (64,'超级管理员','aop.after','编辑字典','cn.wizzer.modules.back.sys.controllers.DictController#editDo','127.0.0.1','字典名称:计件单位','ed822b0fc0fb491d84f088e53e80ec36',1471962660,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (65,'超级管理员','aop.after','新建字典','cn.wizzer.modules.back.sys.controllers.DictController#addDo','127.0.0.1','字典名称:安徽省','ed822b0fc0fb491d84f088e53e80ec36',1471962935,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (66,'超级管理员','aop.after','新建字典','cn.wizzer.modules.back.sys.controllers.DictController#addDo','127.0.0.1','字典名称:合肥市','ed822b0fc0fb491d84f088e53e80ec36',1471962947,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (67,'超级管理员','aop.after','新建字典','cn.wizzer.modules.back.sys.controllers.DictController#addDo','127.0.0.1','字典名称:庐阳区','ed822b0fc0fb491d84f088e53e80ec36',1471962992,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (68,'超级管理员','aop.after','新建字典','cn.wizzer.modules.back.sys.controllers.DictController#addDo','127.0.0.1','字典名称:瑶海区','ed822b0fc0fb491d84f088e53e80ec36',1471963004,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (69,'超级管理员','aop.after','新建字典','cn.wizzer.modules.back.sys.controllers.DictController#addDo','127.0.0.1','字典名称:蜀山区','ed822b0fc0fb491d84f088e53e80ec36',1471963013,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (70,'超级管理员','aop.after','新建字典','cn.wizzer.modules.back.sys.controllers.DictController#addDo','127.0.0.1','字典名称:包河区','ed822b0fc0fb491d84f088e53e80ec36',1471963021,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (71,'超级管理员','aop.after','新建字典','cn.wizzer.modules.back.sys.controllers.DictController#addDo','127.0.0.1','字典名称:经开区','ed822b0fc0fb491d84f088e53e80ec36',1471963031,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (72,'超级管理员','aop.after','新建字典','cn.wizzer.modules.back.sys.controllers.DictController#addDo','127.0.0.1','字典名称:政务区','ed822b0fc0fb491d84f088e53e80ec36',1471963039,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (73,'超级管理员','aop.after','新建字典','cn.wizzer.modules.back.sys.controllers.DictController#addDo','127.0.0.1','字典名称:高新区','ed822b0fc0fb491d84f088e53e80ec36',1471963047,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (74,'超级管理员','aop.after','新建字典','cn.wizzer.modules.back.sys.controllers.DictController#addDo','127.0.0.1','字典名称:滨湖新区','ed822b0fc0fb491d84f088e53e80ec36',1471963054,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (75,'超级管理员','aop.after','添加商品','cn.wizzer.modules.back.we.controllers.WeGoodsController#addDo','127.0.0.1','商品名称：草莓干','ed822b0fc0fb491d84f088e53e80ec36',1471963289,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (76,'超级管理员','aop.after','添加商品','cn.wizzer.modules.back.we.controllers.WeGoodsController#addDo','127.0.0.1','商品名称：芒果干','ed822b0fc0fb491d84f088e53e80ec36',1471963386,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (77,'超级管理员','aop.after','上架商品','cn.wizzer.modules.back.we.controllers.WeGoodsController#enable','127.0.0.1','商品名称:草莓干','ed822b0fc0fb491d84f088e53e80ec36',1471967087,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (78,'超级管理员','aop.after','下架商品','cn.wizzer.modules.back.we.controllers.WeGoodsController#disable','127.0.0.1','商品名称:芒果干','ed822b0fc0fb491d84f088e53e80ec36',1471967089,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (79,'超级管理员','aop.after','上架商品','cn.wizzer.modules.back.we.controllers.WeGoodsController#enable','127.0.0.1','商品名称:芒果干','ed822b0fc0fb491d84f088e53e80ec36',1471967091,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (80,'超级管理员','aop.after','下架商品','cn.wizzer.modules.back.we.controllers.WeGoodsController#disable','127.0.0.1','商品名称:芒果干','ed822b0fc0fb491d84f088e53e80ec36',1471967095,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (81,'超级管理员','aop.after','下架商品','cn.wizzer.modules.back.we.controllers.WeGoodsController#disable','127.0.0.1','商品名称:草莓干','ed822b0fc0fb491d84f088e53e80ec36',1471967097,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (82,'超级管理员','aop.after','上架商品','cn.wizzer.modules.back.we.controllers.WeGoodsController#enable','127.0.0.1','商品名称:草莓干','ed822b0fc0fb491d84f088e53e80ec36',1471967099,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (83,'超级管理员','aop.after','下架商品','cn.wizzer.modules.back.we.controllers.WeGoodsController#disable','127.0.0.1','商品名称:草莓干','ed822b0fc0fb491d84f088e53e80ec36',1471967101,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (84,'超级管理员','aop.after','上架商品','cn.wizzer.modules.back.we.controllers.WeGoodsController#enable','127.0.0.1','商品名称:草莓干','ed822b0fc0fb491d84f088e53e80ec36',1471967105,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (85,'超级管理员','aop.after','添加商品','cn.wizzer.modules.back.we.controllers.WeGoodsController#addDo','127.0.0.1','商品名称：dasd','ed822b0fc0fb491d84f088e53e80ec36',1471967137,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (86,'超级管理员','aop.after','删除商品','cn.wizzer.modules.back.we.controllers.WeGoodsController#delete','127.0.0.1','ID:','ed822b0fc0fb491d84f088e53e80ec36',1471967171,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (87,'超级管理员','aop.after','删除商品','cn.wizzer.modules.back.we.controllers.WeGoodsController#delete','127.0.0.1','ID:239c6b1b364e476ab95daceae614cb83','ed822b0fc0fb491d84f088e53e80ec36',1471967214,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (88,'超级管理员','aop.after','添加商品','cn.wizzer.modules.back.we.controllers.WeGoodsController#addDo','127.0.0.1','商品名称：草莓干','ed822b0fc0fb491d84f088e53e80ec36',1471967391,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (89,'超级管理员','aop.after','修改商品','cn.wizzer.modules.back.we.controllers.WeGoodsController#editDo','127.0.0.1','商品名称:草莓干111','ed822b0fc0fb491d84f088e53e80ec36',1471967439,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (90,'超级管理员','aop.after','修改商品','cn.wizzer.modules.back.we.controllers.WeGoodsController#editDo','127.0.0.1','商品名称:草莓干111','ed822b0fc0fb491d84f088e53e80ec36',1471967456,NULL);
+insert  into `sys_log`(`id`,`nickname`,`type`,`tag`,`src`,`ip`,`msg`,`opBy`,`opAt`,`delFlag`) values (91,'超级管理员','aop.after','修改商品','cn.wizzer.modules.back.we.controllers.WeGoodsController#editDo','127.0.0.1','商品名称:芒果干','ed822b0fc0fb491d84f088e53e80ec36',1471967469,NULL);
 
 /*Table structure for table `sys_menu` */
 
@@ -360,7 +434,7 @@ insert  into `sys_menu`(`id`,`parentId`,`path`,`name`,`aliasName`,`type`,`href`,
 insert  into `sys_menu`(`id`,`parentId`,`path`,`name`,`aliasName`,`type`,`href`,`target`,`icon`,`isShow`,`disabled`,`permission`,`note`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('84b41eaf93e642d68090587b56d4a82e','e09245fc786a48cf9f28a23e324676d6','0001000100010003','删除单位','Delete','data',NULL,NULL,NULL,0,0,'sys.manager.unit.delete',NULL,6,0,'',1471658661,0);
 insert  into `sys_menu`(`id`,`parentId`,`path`,`name`,`aliasName`,`type`,`href`,`target`,`icon`,`isShow`,`disabled`,`permission`,`note`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('86b07961b0694f91be61d3463d3b3795','e1967df962174f859e76b18828573aaf','0001000100040001','添加菜单','Add','data',NULL,NULL,NULL,0,0,'sys.manager.menu.add',NULL,18,0,'',1471658661,0);
 insert  into `sys_menu`(`id`,`parentId`,`path`,`name`,`aliasName`,`type`,`href`,`target`,`icon`,`isShow`,`disabled`,`permission`,`note`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('89fba0fc3f9e4ad6b225f32584a72ffd','08be9decbd7d449d8efeb1f231e914a4','0001000100030003','删除角色','Delete','data',NULL,NULL,NULL,0,0,'sys.manager.role.delete',NULL,14,0,'',1471658661,0);
-insert  into `sys_menu`(`id`,`parentId`,`path`,`name`,`aliasName`,`type`,`href`,`target`,`icon`,`isShow`,`disabled`,`permission`,`note`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('933317a78b6e459c86e8b03d29439b31','20c8806cdc514214a15c72057e72111a','000400020001','商品管理',NULL,'menu','/private/we/goods/index','data-pjax','',1,0,'we.goods.goods',NULL,61,0,'ed822b0fc0fb491d84f088e53e80ec36',1471660485,0);
+insert  into `sys_menu`(`id`,`parentId`,`path`,`name`,`aliasName`,`type`,`href`,`target`,`icon`,`isShow`,`disabled`,`permission`,`note`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('933317a78b6e459c86e8b03d29439b31','20c8806cdc514214a15c72057e72111a','000400020001','商品管理',NULL,'menu','/private/we/goods/goods','data-pjax','',1,0,'we.goods.goods',NULL,61,0,'ed822b0fc0fb491d84f088e53e80ec36',1471660485,0);
 insert  into `sys_menu`(`id`,`parentId`,`path`,`name`,`aliasName`,`type`,`href`,`target`,`icon`,`isShow`,`disabled`,`permission`,`note`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('96554b09a2dd4f82bab7546fa59acd35','66cc21d7ce104dd6877cbce114c59fb3','0002000400010002','修改帐号','Edit','data','','','',0,0,'wx.conf.account.edit',NULL,0,0,'',1467474197,0);
 insert  into `sys_menu`(`id`,`parentId`,`path`,`name`,`aliasName`,`type`,`href`,`target`,`icon`,`isShow`,`disabled`,`permission`,`note`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('9822bafbe3454dfd8e8b974ebc304d03','3f330d729ca34dc9825c46122be1bfae','000300030001','链接分类','Class','menu','/private/cms/link/class','data-pjax','',1,0,'cms.link.class',NULL,42,0,'1a19ef09b12344b4a797d6e6dfe7fb29',1468896932,0);
 insert  into `sys_menu`(`id`,`parentId`,`path`,`name`,`aliasName`,`type`,`href`,`target`,`icon`,`isShow`,`disabled`,`permission`,`note`,`location`,`hasChildren`,`opBy`,`opAt`,`delFlag`) values ('9a9557177d334c209cf73c3817fe3b63','2fab774f8b6d40cb9d7e187babab2d91','0002000400020003','删除菜单','Delete','data','','','',0,0,'wx.conf.menu.delete',NULL,0,0,'',1467474304,0);
@@ -656,7 +730,7 @@ CREATE TABLE `sys_user` (
 
 /*Data for the table `sys_user` */
 
-insert  into `sys_user`(`id`,`loginname`,`password`,`salt`,`nickname`,`online`,`disabled`,`email`,`loginAt`,`loginIp`,`loginCount`,`customMenu`,`loginTheme`,`loginSidebar`,`loginBoxed`,`loginScroll`,`unitid`,`opBy`,`opAt`,`delFlag`) values ('ed822b0fc0fb491d84f088e53e80ec36','superadmin','pYdLm6x2wKDxXLKouxt5UNm5rkfSgIUNDWRoG/MuZok=','PAPUwwjc3l1AcIqAVKkq6A==','超级管理员',1,0,'wizzer@qq.com',1471673920,'127.0.0.1',5,NULL,'palette.css',0,0,1,'54e9d1e51e344230bd9a77b299401286','',1471658662,0);
+insert  into `sys_user`(`id`,`loginname`,`password`,`salt`,`nickname`,`online`,`disabled`,`email`,`loginAt`,`loginIp`,`loginCount`,`customMenu`,`loginTheme`,`loginSidebar`,`loginBoxed`,`loginScroll`,`unitid`,`opBy`,`opAt`,`delFlag`) values ('ed822b0fc0fb491d84f088e53e80ec36','superadmin','pYdLm6x2wKDxXLKouxt5UNm5rkfSgIUNDWRoG/MuZok=','PAPUwwjc3l1AcIqAVKkq6A==','超级管理员',1,0,'wizzer@qq.com',1471958750,'127.0.0.1',11,NULL,'palette.css',0,0,1,'54e9d1e51e344230bd9a77b299401286','',1471658662,0);
 
 /*Table structure for table `sys_user_role` */
 
@@ -698,7 +772,7 @@ CREATE TABLE `we_cart` (
 /*Table structure for table `we_goods` */
 
 CREATE TABLE `we_goods` (
-  `id` varchar(32) NOT NULL DEFAULT '',
+  `id` varchar(32) NOT NULL,
   `classId` varchar(32) DEFAULT NULL COMMENT '分类ID',
   `name` varchar(255) DEFAULT NULL COMMENT '商品名称',
   `title` varchar(255) DEFAULT NULL COMMENT '商品标题',
@@ -709,8 +783,10 @@ CREATE TABLE `we_goods` (
   `stockFreeze` int(20) DEFAULT NULL COMMENT '冻结库存',
   `buyMin` int(20) DEFAULT NULL COMMENT '起订量',
   `buyMax` int(20) DEFAULT NULL COMMENT '限购量',
+  `unit` varchar(20) DEFAULT NULL COMMENT '计件单位',
   `picUrl` varchar(255) DEFAULT NULL COMMENT '商品主图',
   `disabled` tinyint(1) DEFAULT NULL COMMENT '是否下架',
+  `location` int(32) DEFAULT NULL COMMENT '排序字段',
   `opBy` varchar(32) DEFAULT NULL COMMENT '操作人',
   `opAt` int(20) DEFAULT NULL COMMENT '操作时间',
   `delFlag` tinyint(1) DEFAULT NULL COMMENT '删除标记',
@@ -718,6 +794,10 @@ CREATE TABLE `we_goods` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `we_goods` */
+
+insert  into `we_goods`(`id`,`classId`,`name`,`title`,`price`,`priceMarket`,`numSell`,`stock`,`stockFreeze`,`buyMin`,`buyMax`,`unit`,`picUrl`,`disabled`,`location`,`opBy`,`opAt`,`delFlag`) values ('9cd63a23b1204b48b341659b5710f174','','草莓干111','dddd',677,890,0,100,0,1,100,'箱','/upload/image/20160823/v2j507fqtkgqpplg58bds0dhct_s.png',0,3,'ed822b0fc0fb491d84f088e53e80ec36',1471967456,0);
+insert  into `we_goods`(`id`,`classId`,`name`,`title`,`price`,`priceMarket`,`numSell`,`stock`,`stockFreeze`,`buyMin`,`buyMax`,`unit`,`picUrl`,`disabled`,`location`,`opBy`,`opAt`,`delFlag`) values ('a692a43f3b2f425391d739517038c17e','','草莓干','',1989,2500,0,100,0,1,100,'袋','/upload/image/20160823/v2j507fqtkgqpplg58bds0dhct_s.png',0,1,'ed822b0fc0fb491d84f088e53e80ec36',1471963289,0);
+insert  into `we_goods`(`id`,`classId`,`name`,`title`,`price`,`priceMarket`,`numSell`,`stock`,`stockFreeze`,`buyMin`,`buyMax`,`unit`,`picUrl`,`disabled`,`location`,`opBy`,`opAt`,`delFlag`) values ('f38a83d430524a0a9d7c25e45141bf24','d59d28883d06467295a0f6bc243fbfa0','芒果干','芒果干芒果干',2367,6600,0,12,0,1,100,'箱','/upload/image/20160823/qk9o4fnqp0hpsrr7b1nu6ntpu3_s.png',1,2,'ed822b0fc0fb491d84f088e53e80ec36',1471967469,0);
 
 /*Table structure for table `we_goods_class` */
 
@@ -753,12 +833,18 @@ CREATE TABLE `we_goods_content` (
 
 /*Data for the table `we_goods_content` */
 
+insert  into `we_goods_content`(`id`,`goodsId`,`note`,`opBy`,`opAt`,`delFlag`) values ('11fb8a72be874df480f1ba30b630d2a8','9cd63a23b1204b48b341659b5710f174','<p><img src=\"/upload/image/20160823/q46ib8mqeehmto62u8o02vo437.png\" title=\"\" alt=\"QQ截图20160823222449.png\"/>11</p><p><span style=\"color: rgb(62, 62, 62); font-family: \" helvetica=\"\" hiragino=\"\" sans=\"\" microsoft=\"\" line-height:=\"\" white-space:=\"\" background-color:=\"\">草莓干</span></p>','ed822b0fc0fb491d84f088e53e80ec36',1471967391,0);
+insert  into `we_goods_content`(`id`,`goodsId`,`note`,`opBy`,`opAt`,`delFlag`) values ('199ca8c047bf424bb3b9a90752deddc0','f38a83d430524a0a9d7c25e45141bf24','<p>芒果干芒果干芒果干芒果干</p>','ed822b0fc0fb491d84f088e53e80ec36',1471963386,0);
+insert  into `we_goods_content`(`id`,`goodsId`,`note`,`opBy`,`opAt`,`delFlag`) values ('222e98cc893a43019cab9246fe21b64f','a692a43f3b2f425391d739517038c17e','<p><img src=\"/upload/image/20160823/q46ib8mqeehmto62u8o02vo437.png\" title=\"\" alt=\"QQ截图20160823222449.png\"/></p><p><span style=\"color: rgb(62, 62, 62); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; line-height: 25.6px; white-space: pre-wrap; background-color: rgb(255, 255, 255);\">草莓干</span></p>','ed822b0fc0fb491d84f088e53e80ec36',1471963289,0);
+insert  into `we_goods_content`(`id`,`goodsId`,`note`,`opBy`,`opAt`,`delFlag`) values ('9ff700786b39497b97ca3f6a08da7ccb','239c6b1b364e476ab95daceae614cb83','','ed822b0fc0fb491d84f088e53e80ec36',1471967137,0);
+
 /*Table structure for table `we_goods_image` */
 
 CREATE TABLE `we_goods_image` (
   `id` varchar(32) NOT NULL DEFAULT '',
   `goodsId` varchar(32) DEFAULT NULL COMMENT '商品ID',
   `picUrl` varchar(255) DEFAULT NULL COMMENT '图片地址',
+  `location` int(32) DEFAULT NULL COMMENT '排序字段',
   `opBy` varchar(32) DEFAULT NULL COMMENT '操作人',
   `opAt` int(20) DEFAULT NULL COMMENT '操作时间',
   `delFlag` tinyint(1) DEFAULT NULL COMMENT '删除标记',
@@ -766,6 +852,11 @@ CREATE TABLE `we_goods_image` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `we_goods_image` */
+
+insert  into `we_goods_image`(`id`,`goodsId`,`picUrl`,`location`,`opBy`,`opAt`,`delFlag`) values ('15da0f83cba74966934c3b9cdf80e1c2','9cd63a23b1204b48b341659b5710f174','/upload/image/20160823/v2j507fqtkgqpplg58bds0dhct_s.png',1,'ed822b0fc0fb491d84f088e53e80ec36',1471967456,0);
+insert  into `we_goods_image`(`id`,`goodsId`,`picUrl`,`location`,`opBy`,`opAt`,`delFlag`) values ('affad5be313f42289a763c1f28b8f344','f38a83d430524a0a9d7c25e45141bf24','/upload/image/20160823/qk9o4fnqp0hpsrr7b1nu6ntpu3_s.png',3,'ed822b0fc0fb491d84f088e53e80ec36',1471967469,0);
+insert  into `we_goods_image`(`id`,`goodsId`,`picUrl`,`location`,`opBy`,`opAt`,`delFlag`) values ('e2a9831af1454dec9d800d31bf20ffb1','f38a83d430524a0a9d7c25e45141bf24','/upload/image/20160823/4ak7ik64s0jesprbg0usoi54ut_s.png',2,'ed822b0fc0fb491d84f088e53e80ec36',1471967469,0);
+insert  into `we_goods_image`(`id`,`goodsId`,`picUrl`,`location`,`opBy`,`opAt`,`delFlag`) values ('f5466624c00d4775a1de4fb0bff2a530','a692a43f3b2f425391d739517038c17e','/upload/image/20160823/v2j507fqtkgqpplg58bds0dhct_s.png',NULL,'ed822b0fc0fb491d84f088e53e80ec36',1471963289,0);
 
 /*Table structure for table `we_order` */
 
@@ -851,6 +942,8 @@ CREATE TABLE `wx_config` (
 
 /*Data for the table `wx_config` */
 
+insert  into `wx_config`(`id`,`appname`,`ghid`,`appid`,`appsecret`,`encodingAESKey`,`token`,`payMchid`,`payKey`,`payAppSecret`,`opBy`,`opAt`,`delFlag`) values ('ec33cc480d0b4c4987215912a15f2095','测试','gh_428ca7b0c3c1','wxc2b0e9c7dc9483d4','f2be4bf0dd99fea225fe92ae4be06551','AxsqjTjtxjOpOGG7C04nUTlhJNtbTcXwicEvznohJYz','1234567890','','','','ed822b0fc0fb491d84f088e53e80ec36',1471706984,0);
+
 /*Table structure for table `wx_mass` */
 
 CREATE TABLE `wx_mass` (
@@ -930,6 +1023,11 @@ CREATE TABLE `wx_menu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `wx_menu` */
+
+insert  into `wx_menu`(`id`,`parentId`,`path`,`menuName`,`menuType`,`menuKey`,`url`,`location`,`hasChildren`,`wxid`,`opBy`,`opAt`,`delFlag`) values ('76657dc7480f48cb90882f82b632d1cb','','0001','CMS','','','',0,1,'ec33cc480d0b4c4987215912a15f2095','ed822b0fc0fb491d84f088e53e80ec36',1471711590,0);
+insert  into `wx_menu`(`id`,`parentId`,`path`,`menuName`,`menuType`,`menuKey`,`url`,`location`,`hasChildren`,`wxid`,`opBy`,`opAt`,`delFlag`) values ('afba98a80f384074b8b1dc5641e643c6','76657dc7480f48cb90882f82b632d1cb','00010001','栏目1','view','','http://wizzercn.vicp.cc/public/wx/cms/channel/f0ff12aad3914812aaecbe482a660009',1,0,'ec33cc480d0b4c4987215912a15f2095','ed822b0fc0fb491d84f088e53e80ec36',1471711611,0);
+insert  into `wx_menu`(`id`,`parentId`,`path`,`menuName`,`menuType`,`menuKey`,`url`,`location`,`hasChildren`,`wxid`,`opBy`,`opAt`,`delFlag`) values ('b0e0b7b72cb0417a90f96c8959a78992','ec33cc480d0b4c4987215912a15f2095','00010002','栏目2','view','','http://wizzercn.vicp.cc/public/wx/wechat/ec33cc480d0b4c4987215912a15f2095/oauth?goto_url=http://wizzercn.vicp.cc/public/wx/cms/channel/c0aac647702445e5b5cbf46b6b6a44db',2,0,'ec33cc480d0b4c4987215912a15f2095','ed822b0fc0fb491d84f088e53e80ec36',1471711623,0);
+insert  into `wx_menu`(`id`,`parentId`,`path`,`menuName`,`menuType`,`menuKey`,`url`,`location`,`hasChildren`,`wxid`,`opBy`,`opAt`,`delFlag`) values ('ff65de8ff73e40aebe87cc341a4bf365','76657dc7480f48cb90882f82b632d1cb','00010003','文章1','view','','http://wizzercn.vicp.cc/public/wx/cms/article/96f6eaaa1c4b4064af4f2966e313a600',3,0,'ec33cc480d0b4c4987215912a15f2095','ed822b0fc0fb491d84f088e53e80ec36',1471711640,0);
 
 /*Table structure for table `wx_msg` */
 

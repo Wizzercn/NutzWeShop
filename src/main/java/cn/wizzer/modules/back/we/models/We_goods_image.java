@@ -27,6 +27,11 @@ public class We_goods_image extends Model implements Serializable {
     @ColDefine(type = ColType.VARCHAR, width = 255)
     private String picUrl;
 
+    @Column
+    @Comment("排序字段")
+    @Prev(@SQL("SELECT IFNULL(MAX(location),0)+1 FROM we_goods_image"))
+    private Integer location;
+
     public String getId() {
         return id;
     }
@@ -49,5 +54,13 @@ public class We_goods_image extends Model implements Serializable {
 
     public void setPicUrl(String picUrl) {
         this.picUrl = picUrl;
+    }
+
+    public Integer getLocation() {
+        return location;
+    }
+
+    public void setLocation(Integer location) {
+        this.location = location;
     }
 }

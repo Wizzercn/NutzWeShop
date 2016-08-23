@@ -46,7 +46,7 @@ public class We_goods extends Model implements Serializable {
     @Column
     @Comment("销售量")
     @ColDefine(type = ColType.INT, width = 5)
-    private int numSell;
+    private Integer numSell;
 
     @Column
     @Comment("库存")
@@ -56,7 +56,7 @@ public class We_goods extends Model implements Serializable {
     @Column
     @Comment("冻结库存")
     @ColDefine(type = ColType.INT, width = 5)
-    private int stockFreeze;
+    private Integer stockFreeze;
 
     @Column
     @Comment("起订量")
@@ -69,6 +69,11 @@ public class We_goods extends Model implements Serializable {
     private int buyMax;
 
     @Column
+    @Comment("计件单位")
+    @ColDefine(type = ColType.VARCHAR, width = 20)
+    private String unit;
+
+    @Column
     @Comment("商品主图")
     @ColDefine(type = ColType.VARCHAR, width = 255)
     private String picUrl;
@@ -77,6 +82,11 @@ public class We_goods extends Model implements Serializable {
     @Comment("是否下架")
     @ColDefine(type = ColType.BOOLEAN)
     private boolean disabled;
+
+    @Column
+    @Comment("排序字段")
+    @Prev(@SQL("SELECT IFNULL(MAX(location),0)+1 FROM we_goods"))
+    private Integer location;
 
     @Many(target = We_goods_image.class, field = "goodsId")
     private List<We_goods_image> imageList;
@@ -129,11 +139,11 @@ public class We_goods extends Model implements Serializable {
         this.priceMarket = priceMarket;
     }
 
-    public int getNumSell() {
+    public Integer getNumSell() {
         return numSell;
     }
 
-    public void setNumSell(int numSell) {
+    public void setNumSell(Integer numSell) {
         this.numSell = numSell;
     }
 
@@ -145,11 +155,11 @@ public class We_goods extends Model implements Serializable {
         this.stock = stock;
     }
 
-    public int getStockFreeze() {
+    public Integer getStockFreeze() {
         return stockFreeze;
     }
 
-    public void setStockFreeze(int stockFreeze) {
+    public void setStockFreeze(Integer stockFreeze) {
         this.stockFreeze = stockFreeze;
     }
 
@@ -169,6 +179,14 @@ public class We_goods extends Model implements Serializable {
         this.buyMax = buyMax;
     }
 
+    public String getUnit() {
+        return unit;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
+
     public String getPicUrl() {
         return picUrl;
     }
@@ -183,6 +201,14 @@ public class We_goods extends Model implements Serializable {
 
     public void setDisabled(boolean disabled) {
         this.disabled = disabled;
+    }
+
+    public Integer getLocation() {
+        return location;
+    }
+
+    public void setLocation(Integer location) {
+        this.location = location;
     }
 
     public List<We_goods_image> getImageList() {
