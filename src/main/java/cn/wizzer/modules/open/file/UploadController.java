@@ -46,7 +46,7 @@ public class UploadController {
                 String p = Globals.AppRoot;
                 String f = Globals.AppUploadPath + "/image/" + DateUtil.format(new Date(), "yyyyMMdd") + "/" + R.UU32() + tf.getSubmittedFileName().substring(tf.getSubmittedFileName().indexOf("."));
                 Files.write(new File(p + f), tf.getInputStream());
-                return Result.success("上传成功", f);
+                return Result.success("上传成功", Globals.AppBase + f);
             }
         } catch (Exception e) {
             return Result.error("系统错误");
@@ -74,7 +74,7 @@ public class UploadController {
                 Files.write(new File(p + f + suffix), tf.getInputStream());
                 Images.zoomScale(p + f + suffix, p + f + "_s" + suffix, 200, 200, Color.GRAY);
                 Images.zoomScale(p + f + suffix, p + f + "_m" + suffix, 400, 400, Color.GRAY);
-                return Result.success("上传成功", f + "_s" + suffix);
+                return Result.success("上传成功", Globals.AppBase + f + "_s" + suffix);
             }
         } catch (Exception e) {
             e.printStackTrace();
