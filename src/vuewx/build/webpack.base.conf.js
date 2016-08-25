@@ -2,7 +2,6 @@ var path = require('path')
 var config = require('../config')
 var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
-var vuxLoader = require('vux-loader')
 
 module.exports = {
   entry: {
@@ -10,7 +9,7 @@ module.exports = {
   },
   output: {
     path: config.build.assetsRoot,
-    publicPath: config.build.assetsPublicPath,
+    publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath,
     filename: '[name].js'
   },
   resolve: {
@@ -31,7 +30,6 @@ module.exports = {
         test: /\.vue$/,
         loader: 'vue'
       },
-      vuxLoader.getBabelLoader(projectRoot),
       {
         test: /\.js$/,
         loader: 'babel',
