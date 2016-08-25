@@ -24,6 +24,7 @@ public class RouteFilter implements Filter {
         HttpServletResponse res2 = (HttpServletResponse) res;
         res2.setCharacterEncoding("utf-8");
         req2.setCharacterEncoding("utf-8");
+        //res2.setHeader("Access-Control-Allow-Origin","*");
         Sys_route route = Globals.RouteMap.get(req2.getRequestURI());
         if (route != null) {
             if ("show".equals(route.getType())) {

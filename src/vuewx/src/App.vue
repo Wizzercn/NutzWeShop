@@ -1,64 +1,41 @@
 <template>
-  <div id="app">
-    <img class="logo" src="./assets/logo.png">
-    <hello></hello>
-    <p>
-      Welcome to your Vue.js app!
-    </p>
-    <p>
-      To get a better understanding of how this boilerplate works, check out
-      <a href="http://vuejs-templates.github.io/webpack" target="_blank">its documentation</a>.
-      It is also recommended to go through the docs for
-      <a href="http://webpack.github.io/" target="_blank">Webpack</a> and
-      <a href="http://vuejs.github.io/vue-loader/" target="_blank">vue-loader</a>.
-      If you have any issues with the setup, please file an issue at this boilerplate's
-      <a href="https://github.com/vuejs-templates/webpack" target="_blank">repository</a>.
-    </p>
-    <p>
-      You may also want to checkout
-      <a href="https://github.com/vuejs/vue-router/" target="_blank">vue-router</a> for routing and
-      <a href="https://github.com/vuejs/vuex/" target="_blank">vuex</a> for state management.
-    </p>
+  <div class="app">
+    <we-top></we-top>
+    <div>
+      <we-main></we-main>
+      <router-view></router-view>
+    </div>
+    <we-cart></we-cart>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+  import WeTop from './components/we-top'
+  import WeMain from './components/we-main'
+  import WeCart from './components/we-cart'
 
-export default {
-  components: {
-    Hello
+  export default {
+    components: {
+      WeTop,
+      WeMain,
+      WeCart
+    }
   }
-}
 </script>
 
 <style>
-html {
-  height: 100%;
-}
+  html, #app {
+    height: 100%;
+  }
 
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-#app {
-  color: #2c3e50;
-  margin-top: -100px;
-  max-width: 600px;
-  font-family: Source Sans Pro, Helvetica, sans-serif;
-  text-align: center;
-}
-
-#app a {
-  color: #42b983;
-  text-decoration: none;
-}
-
-.logo {
-  width: 100px;
-  height: 100px
-}
+  body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 100%;
+    max-height: 100%;
+    position: relative;
+    font-size: 14px;
+    color: #666;
+  }
 </style>

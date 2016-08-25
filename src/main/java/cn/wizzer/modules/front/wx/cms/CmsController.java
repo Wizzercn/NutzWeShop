@@ -2,6 +2,7 @@ package cn.wizzer.modules.front.wx.cms;
 
 import cn.wizzer.common.base.Result;
 import cn.wizzer.modules.back.cms.models.Cms_article;
+import cn.wizzer.modules.back.cms.models.Cms_site;
 import cn.wizzer.modules.back.cms.services.CmsArticleService;
 import cn.wizzer.modules.back.cms.services.CmsChannelService;
 import cn.wizzer.modules.back.cms.services.CmsSiteService;
@@ -11,6 +12,7 @@ import org.nutz.dao.FieldFilter;
 import org.nutz.dao.util.Daos;
 import org.nutz.ioc.loader.annotation.Inject;
 import org.nutz.ioc.loader.annotation.IocBean;
+import org.nutz.lang.Strings;
 import org.nutz.log.Log;
 import org.nutz.log.Logs;
 import org.nutz.mvc.annotation.At;
@@ -60,5 +62,22 @@ public class CmsController {
     @Ok("beetl:/public/wx/cms/article.html")
     public Object article(String id, HttpServletRequest req) {
         return cmsArticleService.fetch(id);
+    }
+
+    @At("/logo")
+    @Ok("json")
+    public Object logo(HttpServletRequest req) {
+        try {
+            Cms_site site = cmsSiteService.fetch("site");
+            String picUrl = "";
+            if (site != null) {
+                picUrl = site.getSite_wap_logo();
+                if (Strings.isBlank(picUrl))
+                    picUrl = site.getSite_logo();
+            }
+            return Result.success("", picUrl);
+        } catch (Exception e) {
+            return Result.error("");
+        }
     }
 }
