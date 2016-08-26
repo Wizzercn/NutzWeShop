@@ -20,8 +20,8 @@
       getLogo:function(){
         this.$http.get("/api/public/wx/cms/logo").then((res) => {
           const d=JSON.parse(res.data);
-          this.$set('showLogo', 'block')
-          this.$set('logo','/api'+d.data)
+          this.$set('showLogo', 'block');
+          this.$set('logo','/api'+d.data);
         })
       .catch(function(response) {
           console.log(response)
