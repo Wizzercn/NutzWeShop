@@ -1,10 +1,7 @@
 <template>
   <div class="app">
     <we-top></we-top>
-    <div>
-      <we-main></we-main>
-      <router-view></router-view>
-    </div>
+    <we-main></we-main>
     <we-cart></we-cart>
   </div>
 </template>
@@ -26,45 +23,16 @@
 <style>
   html, #app {
     height: 100%;
+    color: #333;
+    font: .373333rem/1.5 Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,Arial,sans-serif;
   }
 
   body {
     margin: 0;
     padding: 0;
-    border: 0;
-    height: 100%;
-    max-height: 100%;
     position: relative;
-    font-size: 14px;
-    color: #666;
-  }
-
-  #main {
-    top: 180px;
-    float: left;
-    width: 300px;
-    height: 100%;
-    background-color: #F5F5F5;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-  }
-
-  #main .container {
-    height: calc(100% - 180px);
-    max-height: calc(100% - 180px);
-    overflow: auto;
-    width: 100%;
-    padding: 0;
-  }
-
-  #main .container .list-group-item {
-    border: 0;
-    border-radius: 0;
-  }
-
-  .list-group-item-heading {
-    font-weight: 300;
-    font-size: 15px;
+    min-height: 100%;
+    font-size: 24px;
   }
 
 </style>

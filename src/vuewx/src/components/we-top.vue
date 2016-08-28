@@ -32,12 +32,10 @@
 </script>
 <style>
   #top{
-    float: left;
-    width: 100%;
-    max-height: 180px;
-    background-color: #F5F5F5;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
+    position: relative;
+    height: 6rem;
+    color: #fff;
+    font-size: .293333rem;
   }
   #top img{
     margin: 0;
